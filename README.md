@@ -6,8 +6,8 @@ This project is a solution for a React Front-End Developer Test. It features a r
 
 Here is a preview of the product cards in both English and Arabic layouts.
 
-
-
+![Product Cards Arabic Preview](arabic.png)
+![Product Cards English Preview](english.png)
 
 ---
 
@@ -39,6 +39,7 @@ Here is a preview of the product cards in both English and Arabic layouts.
 - **Build Tool**: [Vite](https://vitejs.dev/)
 - **Styling**: [TailwindCSS](https://tailwindcss.com/)
 - **State Management**: [Zustand](https://github.com/pmndrs/zustand)
+- **Package Manager**: [pnpm](https://pnpm.io/)
 
 ---
 
@@ -49,7 +50,7 @@ Follow these steps to get the project up and running on your local machine.
 ### Prerequisites
 
 - [Node.js](https://nodejs.org/) (version 16.x or higher)
-- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
+- [pnpm](https://pnpm.io/installation)
 
 ### Installation Steps
 
@@ -61,16 +62,12 @@ Follow these steps to get the project up and running on your local machine.
 
 2.  **Install the dependencies:**
     ```bash
-    npm install
-    ```
-    or if you use yarn:
-    ```bash
-    yarn install
+    pnpm install
     ```
 
 3.  **Run the development server:**
     ```bash
-    npm run dev
+    pnpm dev
     ```
     This will start the Vite development server. Open your browser and navigate to `http://localhost:5173` (or the URL provided in your terminal) to see the application.
 
