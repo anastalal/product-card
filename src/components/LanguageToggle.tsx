@@ -1,6 +1,6 @@
 "use client"
 
-import { useStore } from "../store/useStore"
+import  useStore  from "../store/useStore"
 import enTranslations from "../i18n/en.json"
 import arTranslations from "../i18n/ar.json"
 
