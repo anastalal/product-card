@@ -1,0 +1,19 @@
+{
+  "featured": "Featured",
+  "aiSuggested": "AI Suggested",
+  "simple": "Simple",
+  "variable": "Variable",
+  "from": "From",
+  "to": "to",
+  "bhd": "BHD",
+  "off": "Off",
+  "compare": "Compare",
+  "wishlist": "Add to Wishlist",
+  "removeWishlist": "Remove from Wishlist",
+  "maxCompare": "You can compare maximum 3 products",
+  "toggleLanguage": "عربي",
+  "productCards": "Product Cards",
+  "compareList": "Compare List",
+  "itemsInWishlist": "items in Wishlist",
+  "itemsToCompare": "items to compare"
+}
