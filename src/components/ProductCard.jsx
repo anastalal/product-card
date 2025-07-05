@@ -35,7 +35,7 @@ const ProductCard = ({ product }) => {
   const getPriceDisplay = () => {
     if (product.type === "simple") {
       return (
-        <div className={`flex items-center gap-2 ${isRTL ? "flex-row-reverse" : ""}`}>
+        <div className={`flex items-center gap-2 text-start justify-start `}>
           <span className="text-lg font-bold text-gray-900">
             {product.price} {translations.bhd}
           </span>
@@ -52,7 +52,7 @@ const ProductCard = ({ product }) => {
       const maxPrice = Math.max(...prices)
 
       return (
-        <div className={`text-lg font-bold text-gray-900 ${isRTL ? "text-right" : ""}`}>
+        <div className={`text-lg font-bold text-start text-gray-900 `}>
           {translations.from} {minPrice} {translations.to} {maxPrice} {translations.bhd}
         </div>
       )
@@ -69,20 +69,20 @@ const ProductCard = ({ product }) => {
       dir={isRTL ? "rtl" : "ltr"}
     >
       {/* Badges */}
-      <div className={`absolute top-2 z-10 flex flex-col gap-1 ${isRTL ? "left-2" : "right-2"}`}>
+      <div className={`absolute top-2 z-10 flex flex-col justify-start items-start left-2 rtl:right-2 rtl:left-auto  gap-1 `}>
         {product.is_featured && (
           <span className="bg-yellow-500 text-white text-xs px-2 py-1 rounded-full font-semibold shadow-md">
-            ⭐ {translations.featured}
+             {translations.featured} ⭐
           </span>
         )}
         {product.ai_suggested && (
           <span className="bg-purple-500 text-white text-xs px-2 py-1 rounded-full font-semibold shadow-md">
-            🤖 {translations.aiSuggested}
+           {translations.aiSuggested}  🤖
           </span>
         )}
         {discountPercentage > 0 && (
           <span className="bg-red-500 text-white text-xs px-2 py-1 rounded-full font-semibold shadow-md">
-            🏷️ {discountPercentage}% {translations.off}
+            {discountPercentage}% {translations.off} 🏷️
           </span>
         )}
       </div>
@@ -118,11 +118,11 @@ const ProductCard = ({ product }) => {
         )}
 
         {/* Action Icons */}
-        <div className={`absolute top-2 flex flex-col gap-2 ${isRTL ? "right-2" : "left-2"}`}>
+        <div className={`absolute top-2 flex flex-col gap-2 justify-start items-start right-2 rtl:left-2 rtl:right-auto  `}>
           <button
             onClick={() => toggleWishlist(product.id)}
-            className={`p-2 rounded-full transition-all duration-200 shadow-md hover:scale-110 ${
-              isLiked ? "bg-red-500 text-white" : "bg-white text-gray-600 hover:bg-red-50 hover:text-red-500"
+            className={`size-10 flex justify-center items-center rounded-full transition-all duration-200 shadow-md hover:scale-110 ${
+              isLiked ? "bg-red-300 text-white" : "bg-white text-gray-600 hover:bg-red-50 hover:text-red-500"
             }`}
             title={isLiked ? translations.removeWishlist : translations.wishlist}
           >
@@ -131,20 +131,20 @@ const ProductCard = ({ product }) => {
 
           <button
             onClick={handleCompareClick}
-            className={`p-2 rounded-full transition-all duration-200 shadow-md hover:scale-110 ${
-              isCompared ? "bg-blue-500 text-white" : "bg-white text-gray-600 hover:bg-blue-50 hover:text-blue-500"
+            className={`size-10 flex justify-center items-center rounded-full transition-all duration-200 shadow-md hover:scale-110 ${
+              isCompared ? "bg-blue-300 text-white" : "bg-white text-gray-600 hover:bg-blue-50 hover:text-blue-500"
             }`}
             title={translations.compare}
           >
-            <span className="text-lg">📊</span>
+            <span className=" text-lg">📊</span>
           </button>
         </div>
       </div>
 
       {/* Product Info */}
       <div className="p-4">
-        <div className={`flex items-center justify-between mb-3 ${isRTL ? "flex-row-reverse" : ""}`}>
-          <h3 className={`font-semibold text-gray-900 text-lg ${isRTL ? "text-right" : "text-left"}`}>
+        <div className={`flex items-center justify-between mb-3`}>
+          <h3 className={`font-semibold text-gray-900 text-lg text-start `}>
             {product.name[language]}
           </h3>
           <span
@@ -157,7 +157,7 @@ const ProductCard = ({ product }) => {
         </div>
 
         {/* Price */}
-        <div className={isRTL ? "text-right" : "text-left"}>{getPriceDisplay()}</div>
+        <div className="text-start">{getPriceDisplay()}</div>
       </div>
     </div>
   )
